@@ -85,7 +85,6 @@ def Plotresults(points_list,number_of_rounds):
             pointsy.append(p[1])
         plt.plot(pointsx,pointsy)
         plt.plot(pointsx[0],pointsy[0],'ro')
-#        plt.plot(points_list[0],points_list[1],'ro') #Apply this code to draw a dot on every point in the iteration.
     plt.show()
 
 #setting up variables used by the code.
