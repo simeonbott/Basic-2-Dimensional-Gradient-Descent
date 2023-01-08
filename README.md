@@ -1,7 +1,15 @@
 # Basic-2-Dimensional-Gradient-Descent-Python
-#The code in this repository is a basic 2d model of gradient descent with fixed learning rate.
+#The code in this repository is a basic 2d model of gradient descent with a fixed learning rate.
 
-How to use:
+Relevant links:
+
+https://machinelearningmastery.com/a-gentle-introduction-to-gradient-descent-procedure/
+
+https://en.wikipedia.org/wiki/Gradient_descent
+
+https://en.wikipedia.org/wiki/Gradient
+
+Variables:
 
 A number of variables are available at the top of the code. These control the input equation, learning rate, range of starting points, number of starting points and the limit value, values with a co-ordinate above the limit value will cause the code to abort and class the gradient descent as divergent. This is necessary due to the fact that a fixed learning rate causes the iteration to shoot away from the origin incredibly fast.
 
@@ -27,3 +35,6 @@ F[2][2] = 1
 
 Corresponds to the equation F(X,Y) = -3XY + X^2 + X^2Y^2, and the order is 2.
 
+About the limit setting:
+
+The limit setting will detect when a new iteration contains a co-ordinate or magnitude larger than the value chosen. In this case, the remaining iterations are cancelled and the output will use the last value before the limit was crossed. In extreme cases, this can lead to a round terminating on the starting point. It is recommended to lower the starting_range and learning rate values, or otherwise customise the starting points, if this happens a lot for a particular function. The function chosen may also be illfitted for modelling a gradient descent. For more information, see the links above.
