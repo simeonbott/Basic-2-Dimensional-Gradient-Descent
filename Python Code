@@ -61,17 +61,18 @@ def FindGradient(point,GradF,order):
       
 #Runs the full Gradient Descent Algorithm and outputs the points and gradients at those points.
 def GradientDescent(point,GradF,points_list,grads_list,order,iterations,learning_coefficient,limit):  
+    points_list.append(point)
     for i in range(iterations):
-        if max(point[0],-point[0],point[1],point[0]) > limit:
+        if max(point[0],-point[0],point[1],-point[1]) > limit:
             for j in range(i,iterations):
-                points_list.append(point)
+                points_list[-1] = points_list[-2]
+                points_list.append(points_list[-2])
                 grads_list.append(gradient)
             break
         gradient = FindGradient(point,GradF,order)
-        points_list.append(point)
         grads_list.append(gradient)
-        point -= learning_coefficient*gradient
-    points_list.append(point)
+        point = point - learning_coefficient*gradient
+        points_list.append(point)
     grads_list.append("N/A")
     return points_list, grads_list
 
