@@ -2,12 +2,13 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
-#variables: order should be the highest power appearing in the equation F. F is of the form: F[0][0] + F[0][1]X + F[0][2]X^2 + F[1][1]XY + F[1][0]Y ... etc.
+#variables: F is of the form: F[0][0] + F[0][1]X + F[0][2]X^2 + F[1][1]XY + F[1][0]Y ... etc.
 #F should only contain positive integer powers of X and Y with real coefficients. Read the 'ReadMe' file attached for more information.
 #learning_coefficient is the iteration step length. It must be below 1, and is usually set as a small value.
 #iterations is the number of iterations to be performed from the starting point.
 #number of rounds controls the number of starting points.
 #starting points are random (within the starting_range) by default but can be added manually as a list of 2-tuples.
+#order should be equal to or greater than the highest power appearing in the equation form of F.
 #limit is the highest value permitted before classing the gradient descent as divergent.
 
 
