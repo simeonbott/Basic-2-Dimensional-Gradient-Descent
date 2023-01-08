@@ -1,5 +1,5 @@
 # Basic-2-Dimensional-Gradient-Descent-Python
-#The code in this repository is a basic 2d model of gradient descent with a fixed learning rate.
+#The code in this repository is a basic 2d model of gradient descent with a fixed learning rate. The diagram produced by the code places a dot on each starting point and draws a line to show the direction of movement from that point during the algorithm.
 
 Relevant links:
 
