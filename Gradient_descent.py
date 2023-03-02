@@ -21,7 +21,7 @@ import numpy as np
 learning_coefficient = 0.01
 iterations = 100
 starting_range = 50
-limit = 100 #mostly works but sometimes doesn't seem to. Need to bugfix.
+limit = 100
 number_of_rounds = 100
 order = 3
 F = np.zeros((order+1)**2).reshape(order+1,order+1)
